@@ -8,8 +8,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - postgres-volume:/var/lib/postgresql/data
-    restart: unless-stopped
+      - ./pgdata:/var/lib/postgresql
 
   pgadmin:
     image: dpage/pgadmin4:latest
